@@ -1,0 +1,9 @@
+{
+ "type": "wiki",
+ "title": "알고리즘 (1) - dijkstra algorithm",
+ "summary": "다익스트라",
+ "parent": "algorithm/index",
+ "url": "/wiki/algorithm/dijkstra",
+ "updated": "2021-09-25 22:56:29 +0900",
+ "children": []
+}

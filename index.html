@@ -1,0 +1,67 @@
+---
+layout: home
+adsense: false
+regenerate: true
+---
+
+<div class="blog-face">
+    <div>
+        <H3>
+            ...connecting fragmented memories ...(23%)...
+        </H3>
+    </div>
+    클릭과 페이지 넘김을 통한 <b style="color: red">순차 탐색</b>이 아니라,<br/> 색인과 키워드 검색을 통한 <b style="color: orange">비순차 탐색</b>으로 <br/><b style="color: blue">조각난 기억</b>을 이어 나가자<br/><br/><br/> (Special Thanks To <br/><a href="https://johngrib.github.io/">John Grip a.k.a. 기계인간</a><br/>for providing awesome wiki template) <br/><br/>
+
+    <div>
+    </div>
+    <div>
+        <a href="/blog/">학습 일지</a>
+        /
+        <a href="/tag/">태그</a>
+        <br/>
+        <br/>
+    </div>
+    <div class="contact">
+{% if site.github_username %}
+        <a href="https://github.com/{{ site.github_username }}">GitHub</a>
+{% endif %}
+<!--{% if site.twitter_username %}-->
+        <!--<a href="https://twitter.com/{{ site.twitter_username }}">Twitter</a>-->
+<!--{% endif %}-->
+{% if site.email %}
+        <a href="mailto:{{ site.email }}">Email</a>
+{% endif %}
+        <a href="{{ "/feed.xml" | prepend: site.baseurl }}">RSS</a>
+    </div>
+</div>
+<div>
+    <H3 class="indent">최근 변경된 위키 문서 <br/>(..recently modified)</H3>
+    <ul class="post-list">
+{% assign documents = site.wiki | sort: 'updated' | reverse %}
+{% for doc in documents limit: 30 %}
+    {% if doc.public == true and doc.title != 'wiki'%}
+        <li>
+            <div>
+                <a class="post-link" href="{{ doc.url | prepend: site.baseurl }}">
+                    <div class="post-meta">
+                        {{ doc.updated | date: "%Y.%m.%d" }}
+                        -
+                        {{ doc.title }}
+                    </div>
+                    <div class="post-excerpt">{{ doc.summary }}</div>
+                    <ul class="tag-list">
+                        <li class="post-tag">
+                            {{ doc. tag }}
+                        </li>
+                    </ul>
+                </a>
+            </div>
+        </li>
+    {% endif %}
+{% endfor %}
+    </ul>
+    <h4>
+        <a href="/recent/">전체 문서 리스트 보기 ({{ site.wiki | size | minus: 1 }} 항목)</a>
+    </h4>
+</div>
+{% include createLink.html %}

@@ -1,0 +1,64 @@
+# Site settings
+title: yoonsung0711's study wiki
+url: "https://yoonsung0711.github.io"
+baseurl: ""
+description: >
+    study vimwiki
+
+# My information
+email: yoonsung0711@gmail.com
+author: 루시오 김
+profile: 트리플 서버 개발자
+twitter_username: n/a
+github_username: yoonsung0711
+comment-support: utterances
+
+# Build settings
+plugins:
+  - jekyll-paginate
+  - jekyll-gist
+
+permalink: /blog/:year/:month/:day/:title/
+
+markdown: kramdown
+highlighter: rouge
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
+
+paginate: 10
+paginator_path: "/blog"
+paginate_path: "/blog/page:num/"
+
+# Collections
+collections:
+    wiki:
+        output: true
+        permalink: /:collection/:path/
+
+# Comment Service
+disqus:
+  id: yoonsung0711
+  shortname: yoonsung0711
+utterances:
+  repo: yoonsung0711/yoonsung0711.github.io
+  issue-term: url
+  label: Comment
+  branch: master
+
+#google_analytics:
+  #ua: G-RK3M0SSQ6G
+  #encrypted_ua: a340944fd5217854388641995TPB9dYcVujRQ/O5sZRMxpoE+elmvBntTYgEIg==
+
+#google_adsense:
+  #client: ca-pub-3675948545737694
+
+blame: "https://github.com/yoonsung0711/yoonsung0711.github.io/blame/master/_wiki"
+edit: "https://github.com/yoonsung0711/yoonsung0711.github.io/edit/master/_wiki"
+issue: "https://github.com/yoonsung0711/yoonsung0711.github.io/issues/new"
+
+timezone: "Asia/Seoul"
+
+# https://kramdown.gettalong.org/rdoc/Kramdown/Options.html - smart_quotes
+kramdown:
+    smart_quotes: ["apos", "apos", "quot", "quot"]

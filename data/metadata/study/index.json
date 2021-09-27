@@ -1,0 +1,11 @@
+{
+ "type": "wiki",
+ "title": "Study",
+ "summary": "",
+ "parent": "index",
+ "url": "/wiki/study/index",
+ "updated": "2020-01-16 20:22:50 +0900",
+ "children": [
+  "study/kubernetes/index"
+ ]
+}

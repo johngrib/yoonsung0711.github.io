@@ -1,0 +1,9 @@
+{
+ "type": "wiki",
+ "title": "테크날로지(1) - rabbitmq와 kafka 비교",
+ "summary": "협업 개발환경 조성을 위해 프로젝트 위키 구성 후 공유하기",
+ "parent": "tech-knowlogy/index",
+ "url": "/wiki/tech-knowlogy/rabbitmq_kafka",
+ "updated": "2021-09-24 22:56:29 +0900",
+ "children": []
+}

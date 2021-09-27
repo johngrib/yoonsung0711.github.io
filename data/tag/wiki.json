@@ -1,0 +1,7 @@
+[
+ "algorithm/dijkstra",
+ "project/dotfiles",
+ "project/taskwiki",
+ "project/vimwiki",
+ "tech-knowlogy/rabbitmq_kafka"
+]

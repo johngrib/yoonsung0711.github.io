@@ -1,0 +1,14 @@
+{
+ "type": "wiki",
+ "title": "Pattern-language",
+ "parent": "index",
+ "url": "/wiki/pattern-language/index",
+ "updated": "2019-08-13 13:50:57 +0900",
+ "children": [
+  "pattern-language/kubernetes/index",
+  "pattern-language/messaging/index",
+  "pattern-language/oop/index",
+  "pattern-language/refactoring/index",
+  "pattern-language/xUnit/index"
+ ]
+}

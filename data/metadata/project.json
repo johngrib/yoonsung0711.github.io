@@ -1,0 +1,10 @@
+{
+ "type": "wiki",
+ "title": "Project",
+ "parent": "index",
+ "url": "/wiki/project",
+ "updated": "2019-08-13 13:50:57 +0900",
+ "children": [
+  "project/vimwiki"
+ ]
+}
