@@ -1,6 +1,6 @@
 ---
 layout  : wiki
-title   : 컨테이너 인프라 환경
+title   : 컨테이너 인프라 환경 준비하기 
 summary : 마이크로서비스와 컨테이너 인프라 환경
 date    : 2021-09-25 22:56:28 +0900
 updated : 2021-09-25 22:56:29 +0900
@@ -14,6 +14,10 @@ latex   : true
 {:toc}
 
 ## 개 요
+
+```shell
+$ brew install vagrant
+```
 
 ## Links
 

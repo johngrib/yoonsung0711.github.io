@@ -29,6 +29,8 @@ regenerate: true
 
 ## [[/study/kubernetes/index]]
 
+* [[/study/kubernetes/1_kube]]
+
 
 
 <!--
