@@ -1,6 +1,6 @@
 {
  "type": "wiki",
- "title": "컨테이너 인프라 환경 준비하기",
+ "title": "컨테이너 인프라를 사용하는 이유",
  "summary": "마이크로서비스와 컨테이너 인프라 환경",
  "parent": "study/kubernetes/index",
  "url": "/wiki/study/kubernetes/1_kube",
