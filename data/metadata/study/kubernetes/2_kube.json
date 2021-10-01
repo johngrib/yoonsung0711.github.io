@@ -1,0 +1,9 @@
+{
+ "type": "wiki",
+ "title": "Vagrant로 Kubernetes 실습 환경 조성하기",
+ "summary": "virtualbox를 wrapping하는 IaC 툴",
+ "parent": "study/kubernetes/index",
+ "url": "/wiki/study/kubernetes/2_kube",
+ "updated": "2021-09-26 22:56:29 +0900",
+ "children": []
+}
