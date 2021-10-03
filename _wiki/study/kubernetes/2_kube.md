@@ -35,6 +35,11 @@ latex   : true
 
         * appCleaner 앱으로 삭제 후 재설치하여 문제 해결
 
+        * 앱 설치 후에는 System Preferences > Security & Privacy에 앱 실행을 허용해주어야 함
+
+          ![security](https://user-images.githubusercontent.com/65143458/135757145-33d771ee-7483-4876-b181-067008c09cfc.png)
+
+
     * Vagrant was unable to mount VirtualBox shared folders. This is usually because the filesystem "vboxsf" is not available. 
 
         * VirtualBox의 공유폴더가 마운트 되지 않는 오류로, vagrant-vbguest 플러그인 설치로 해결 가능함 (플러그인 설치는 vagrant umount: /mnt 오류 참조)
@@ -48,13 +53,28 @@ latex   : true
             ```shell
             $ vagrant plugin install vagrant-vbguest --plugin-version 0.21
             ```
+    * Vagrant: * Unknown configuration section 'disksize'.
+
+        * VirtualBox의 디스크 용량은 8GB로 기본 설정되어 있고, 이를 변경하려면 별도의 플러그인을 설치해야 함
+
+            ```shell
+            $ vagrant plugin install vagrant-disksize 
+            ```
+            
 * Vagrant 명령어
 
     * vagrant up
 
-    * vagrant ssh
+      * Vagrantfile를 이용하여 vm 인스턴스 생성
 
-    * vagrant destory
+    * vagrant ssh (vm 인스턴스 이름)
+
+      * Vagrantfile로 정의하여 생성한 가상 머신에 ssh 접속
+
+    * vagrant destroy 
+
+      * Vagrantfile로 정의하여 생성한 가상 머신 삭제
 
     * vagrant box list
 
+      * Vagrantfile의 base 이미지 설정을 통해 다운로드 한 이미지 목록 출력
