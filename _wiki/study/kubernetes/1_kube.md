@@ -7,11 +7,13 @@ updated : 2021-09-25 22:56:29 +0900
 tag     : kubernetes
 toc     : true
 public  : true
-parent  : [[/study/kubernetes/index]]
+parent  : [[/index]]
 latex   : true
 ---
 * TOC
 {:toc}
+
+![container](https://user-images.githubusercontent.com/65143458/135781737-1656d3e5-67c5-47c7-b915-5f5c4a29d759.png)
 
 ## 개 요
 

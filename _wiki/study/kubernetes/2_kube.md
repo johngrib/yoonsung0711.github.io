@@ -7,11 +7,13 @@ updated : 2021-09-26 22:56:29 +0900
 tag     : kubernetes
 toc     : true
 public  : true
-parent  : [[/study/kubernetes/index]]
+parent  : [[/index]]
 latex   : true
 ---
 * TOC
 {:toc}
+
+![vagrant](https://user-images.githubusercontent.com/65143458/135781471-da38e393-d532-4f03-a63e-e677d3c0e294.png)
 
 ## 개 요
 
