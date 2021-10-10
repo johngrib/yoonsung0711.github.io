@@ -31,6 +31,12 @@ regenerate: true
 
 * [[/study/kubernetes/1_kube]]
 
+* [[/study/kubernetes/2_kube]]
+
+* [[/study/kubernetes/3_kube]]
+
+* [[/study/kubernetes/4_kube]]
+
 
 
 <!--

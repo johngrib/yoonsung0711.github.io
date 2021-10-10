@@ -4,6 +4,10 @@
  "url": "/wiki/index",
  "updated": "2021-09-24 21:58:47 +0900",
  "children": [
-  "study/index"
+  "study/index",
+  "study/kubernetes/1_kube",
+  "study/kubernetes/2_kube",
+  "study/kubernetes/3_kube",
+  "study/kubernetes/4_kube"
  ]
 }

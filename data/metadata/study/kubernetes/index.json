@@ -5,8 +5,5 @@
  "parent": "study/index",
  "url": "/wiki/study/kubernetes/index",
  "updated": "2020-01-16 20:22:50 +0900",
- "children": [
-  "study/kubernetes/1_kube",
-  "study/kubernetes/2_kube"
- ]
+ "children": []
 }
