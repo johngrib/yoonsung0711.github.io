@@ -1,7 +1,7 @@
 {
  "type": "wiki",
- "title": "실습용 Kubernetes 클러스터 구성요소와 기본 개념 살펴보기",
- "summary": "kubernetes 클러스터 아키텍처 및 인스턴스 라이프사이클",
+ "title": "Kubernetes 클러스터 구성요소와 기본 개념 살펴보기",
+ "summary": "아키텍처와 인스턴스 라이프사이클",
  "parent": "index",
  "url": "/wiki/study/kubernetes/4_kube",
  "updated": "2021-10-10 09:00:01 +0900",
