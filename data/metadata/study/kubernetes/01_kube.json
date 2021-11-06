@@ -1,0 +1,9 @@
+{
+ "type": "wiki",
+ "title": "컨테이너 인프라를 사용하는 이유",
+ "summary": "마이크로서비스와 컨테이너 인프라 환경",
+ "parent": "index",
+ "url": "/wiki/study/kubernetes/01_kube",
+ "updated": "2021-09-25 22:56:29 +0900",
+ "children": []
+}

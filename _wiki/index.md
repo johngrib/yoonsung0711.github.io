@@ -29,21 +29,31 @@ regenerate: true
 
 ## [[/study/kubernetes/index]]
 
-* [[/study/kubernetes/1_kube]]
+* [[/study/kubernetes/01_kube]]
 
-* [[/study/kubernetes/2_kube]]
+* [[/study/kubernetes/02_kube]]
 
-* [[/study/kubernetes/3_kube]]
+* [[/study/kubernetes/03_kube]]
 
-* [[/study/kubernetes/4_kube]]
+* [[/study/kubernetes/04_kube]]
 
-* [[/study/kubernetes/5_kube]]
+* [[/study/kubernetes/05_kube]]
 
-* [[/study/kubernetes/6_kube]]
+* [[/study/kubernetes/06_kube]]
 
-* [[/study/kubernetes/7_kube]]
+* [[/study/kubernetes/07_kube]]
 
-* [[/study/kubernetes/8_kube]]
+* [[/study/kubernetes/08_kube]]
+
+* [[/study/kubernetes/09_kube]]
+
+* [[/study/kubernetes/10_kube]]
+
+## [[/study/network/index]]
+
+* [[/study/network/04_network]]
+
+* [[/study/network/05_network]]
 
 <!--
 

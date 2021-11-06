@@ -6,6 +6,7 @@
  "url": "/wiki/study/index",
  "updated": "2020-01-16 20:22:50 +0900",
  "children": [
-  "study/kubernetes/index"
+  "study/kubernetes/index",
+  "study/network/index"
  ]
 }

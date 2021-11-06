@@ -1,0 +1,9 @@
+{
+ "type": "wiki",
+ "title": "PV (PersistentVolume), PVC (PersistentVolumeClaim)",
+ "summary": "쿠버네티스 볼륨 오브젝트",
+ "parent": "index",
+ "url": "/wiki/study/kubernetes/10_kube",
+ "updated": "2021-11-1 09:00:01 +0900",
+ "children": []
+}

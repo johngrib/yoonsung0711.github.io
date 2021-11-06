@@ -1,0 +1,9 @@
+{
+ "type": "wiki",
+ "title": "Ansible과 Terraform으로 Kubernetes 배포 환경 조성하기",
+ "summary": "remote server에 provisioning 가능한 IaC 툴",
+ "parent": "index",
+ "url": "/wiki/study/kubernetes/03_kube",
+ "updated": "2021-10-03 09:00:01 +0900",
+ "children": []
+}

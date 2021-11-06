@@ -1,0 +1,9 @@
+{
+ "type": "wiki",
+ "title": "Kubernetes 파드의 C/U/D (디플로이먼트 생성/변경/삭제)",
+ "summary": "디플로이먼트로 쿠버네티스 파드 관리하기",
+ "parent": "index",
+ "url": "/wiki/study/kubernetes/06_kube",
+ "updated": "2021-10-10 09:00:01 +0900",
+ "children": []
+}

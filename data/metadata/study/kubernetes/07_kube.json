@@ -1,0 +1,9 @@
+{
+ "type": "wiki",
+ "title": "외부와의 연결 방법을 다양한 방식으로 제공하는 쿠버네티스 오브젝트들 (노드포트/ 인그레스/로드밸런서)",
+ "summary": "디플로이먼트로 쿠버네티스 파드 관리하기",
+ "parent": "index",
+ "url": "/wiki/study/kubernetes/07_kube",
+ "updated": "2021-10-10 09:00:01 +0900",
+ "children": []
+}

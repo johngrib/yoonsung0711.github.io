@@ -1,0 +1,9 @@
+{
+ "type": "wiki",
+ "title": "Kubernetes 오브젝트 / 명세(spec)",
+ "summary": "쿠버네티스가 리소스를 관리하는 방법",
+ "parent": "index",
+ "url": "/wiki/study/kubernetes/05_kube",
+ "updated": "2021-10-11 09:00:01 +0900",
+ "children": []
+}

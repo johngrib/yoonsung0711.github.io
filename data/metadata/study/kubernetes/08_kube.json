@@ -1,0 +1,9 @@
+{
+ "type": "wiki",
+ "title": "부하를 분산하여 라우팅하는 로드밸런서와 부하량에 파드를 조절하는 HPA (수평 스케일러)",
+ "summary": "디플로이먼트로 쿠버네티스 파드 관리하기",
+ "parent": "index",
+ "url": "/wiki/study/kubernetes/08_kube",
+ "updated": "2021-10-10 09:00:01 +0900",
+ "children": []
+}

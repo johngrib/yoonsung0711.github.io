@@ -1,0 +1,9 @@
+{
+ "type": "wiki",
+ "title": "데몬셋, 레플리카셋, 스테이트풀셋, 크론잡",
+ "summary": "쿠버네티스 컨트롤러 오브젝트",
+ "parent": "index",
+ "url": "/wiki/study/kubernetes/09_kube",
+ "updated": "2021-11-1 09:00:01 +0900",
+ "children": []
+}
