@@ -49,6 +49,10 @@ regenerate: true
 
 * [[/study/kubernetes/10_kube]]
 
+* [[/study/kubernetes/11_kube]]
+
+* [[/study/kubernetes/12_kube]]
+
 ## [[/study/network/index]]
 
 * [[/study/network/04_network]]

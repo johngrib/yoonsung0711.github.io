@@ -1,6 +1,6 @@
 ---
 layout  : wiki
-title   : NAT / PAT
+title   : 네트워크 주소 변환 기술(NAT / PAT / Source NAT / Destination NAT / Dynamic NAT / Static NAT)
 summary : 
 date    : 2021-11-13 09:00:00 +0900
 updated : 2021-11-13 09:00:01 +0900
@@ -13,17 +13,13 @@ latex   : true
 * TOC
 {:toc}
 
-![load_balancer](https://user-images.githubusercontent.com/24386223/140600346-5153db55-4fd2-49ef-9437-d26daacfa14e.png)
+![NAT](https://user-images.githubusercontent.com/65143458/141114269-ff873e5d-40ec-4937-a516-ee27015bb45d.jpeg)
 
-_↑↑↑ 로드밸런서_
+_↑↑↑ NAT_
 
-![tcp_packet](https://user-images.githubusercontent.com/24386223/140610111-62a1000e-3b9f-4d50-9be4-16720d324b5b.png)
+![PAT](https://user-images.githubusercontent.com/65143458/141115113-87d49283-a42c-48f5-a6a8-946edababb25.png)
 
-_↑↑↑ TCP Packet_
-
-![http_packet](https://user-images.githubusercontent.com/24386223/140610130-b48f5048-d81e-4969-915a-13a1f2d1e72d.png)
-
-_↑↑↑ HTTP Packet_
+_↑↑↑ PAT_
 
 ## 개 요
 

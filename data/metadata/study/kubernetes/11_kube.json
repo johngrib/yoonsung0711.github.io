@@ -1,0 +1,9 @@
+{
+ "type": "wiki",
+ "title": "도커 컨테이너",
+ "summary": "쿠버네티스를 구성하는 기반 기술",
+ "parent": "index",
+ "url": "/wiki/study/kubernetes/11_kube",
+ "updated": "2021-11-14 09:00:01 +0900",
+ "children": []
+}

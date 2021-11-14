@@ -1,6 +1,6 @@
 {
  "type": "wiki",
- "title": "NAT / PAT",
+ "title": "네트워크 주소 변환 기술(NAT / PAT / Source NAT / Destination NAT / Dynamic NAT / Static NAT)",
  "summary": "",
  "parent": "index",
  "url": "/wiki/study/network/07_01_network",

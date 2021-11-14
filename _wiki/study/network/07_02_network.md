@@ -23,8 +23,59 @@ _↑↑↑ DNS Recursive Query_
 
 ## 개 요
 
+## DNS의 주요 레코드
+
+* A Record
+
+    * 도메인 이름에 IP 주소를 매핑
+
+    * google.co.kr -> 172.217.25.67
+
+        ```shell
+        $ nslookup google.co.kr
+        ```
+
+* CNAME
+
+    * 도메인 이름의 별칭
+
+    * www.google.co.kr -> google.co.kr
+
+* AAAA Record
+
+* TXT Record
+
+    ```shell
+    yoonsung0711$ nslookup
+    > set q=txt
+    > daum.net
+    Non-authoritative answer:
+    daum.net	text = "google-site-verification=CQHqDeJv5QbFRN_ViQvKJa3jeMDrCiw2iEPs1XcdAmk"
+    daum.net	text = "v=spf1 include:_spf.daum.net ~all"
+    daum.net	text = "google-site-verification=0w8tAk4ZN8tACAfxeAkgBQy3MfsZiFD3gt5zCeouVNQ"
+    ```
+* MX Record
+
+    ```shell
+    yoonsung0711$ nslookup
+    > set q=mx
+    > daum.net
+    Non-authoritative answer:
+    daum.net	mail exchanger = 10 mx2.hanmail.net.
+    daum.net	mail exchanger = 10 mx4.hanmail.net.
+    daum.net	mail exchanger = 10 mx1.hanmail.net.
+    daum.net	mail exchanger = 10 mx3.hanmail.net.
+    ```
+
+* PTR (Pointer) 레코드
+
+    ```shell
+    yoonsung0711$ nslookup
+    > set q=PTR
+    > 209.132.183.181
+    Non-authoritative answer:
+    181.183.132.209.in-addr.arpa	name = origin-www2.redhat.com.
+    ```
 
 ## Links
-
-* [devowen.com](https://devowen.com/406): [네트워크] DNS(도메인 네임 시스템)
 

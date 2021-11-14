@@ -8,5 +8,8 @@
  "study/kubernetes/07_kube",
  "study/kubernetes/08_kube",
  "study/kubernetes/09_kube",
- "study/kubernetes/10_kube"
+ "study/kubernetes/10_kube",
+ "study/kubernetes/11_kube",
+ "study/kubernetes/12_kube",
+ "study/kubernetes/14_kube"
 ]

@@ -1,0 +1,9 @@
+{
+ "type": "wiki",
+ "title": "지속적인 통합 / 배포",
+ "summary": "쿠버네티스 볼륨 오브젝트",
+ "parent": "index",
+ "url": "/wiki/study/kubernetes/14_kube",
+ "updated": "2021-11-8 09:00:01 +0900",
+ "children": []
+}
