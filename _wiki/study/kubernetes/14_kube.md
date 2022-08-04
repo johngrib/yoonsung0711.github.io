@@ -1,9 +1,9 @@
 ---
 layout  : wiki
-title   : 지속적인 통합 / 배포 
-summary : 쿠버네티스 볼륨 오브젝트
-date    : 2021-11-21 09:00:00 +0900
-updated : 2021-11-21 09:00:01 +0900
+title   : 도커 레지스트리 구축하기
+summary : 쿠버네티스 클러스터에 이미지 공유하기
+date    : 2021-11-21 11:00:00 +0900
+updated : 2021-11-21 11:00:01 +0900
 tag     : kubernetes
 toc     : true
 public  : true
@@ -17,53 +17,113 @@ latex   : true
 
 ## 개 요
 
-* 파드(컨테이너)는 라이프사이클이 일시적(ephermeral)이므로 파드에서 실행되는 상태 비저장(stateless) 애플리케이션의 상태를 영속적으로 저장할 수 있는 방법이 필요함
-
-* 쿠버네티스는 컨테이너가 아닌 파드에 종속되는 데이터 저장소를 생성(PV)하고 이를 필요한 만큼 파드(여러 컨테이너)에 할당(PVC)하는 객체를 이용해 클러스터의 영속성을 유지함
+* 직접 생성한 이미지를 쿠버네티스 노드에 배포하기 위해 모든 노드에서 공통으로 접근 가능한 사설 레지스트리를 구축함
 
 <br/>
 
-## CI / CD 도구 비교
+## 레지스트리 비교
 
-* TeamCity
+* Quay
 
-    * 젯브레인즈에서 만든 CI / CD 도구
+    * Red Hat에서 개발중인 오픈소스 프로젝트
+
+    * 서비스형, 설치형 제공
         
-    * Kotlin DSL 사용
+    * 유료
 
-    * 에이전트 3개, 빌드 작업 100개 무료 사용 가능
+* Harbor
 
-* Github Action 
+    * 클라우드 네이티브 컴퓨팅 재단에서 지원하는 Project Harbor가 개발중인 오픈소스 프로젝트
 
-    * Github에서 만든 Workflow 기반의 CI / CD 도구
+    * 도커 이미지 외 헬름 차트 저장 가능
 
-    * yaml 사용
+    * 무료
 
-    * 깃헙 저장소에 소스 코드 공개시 무료 사용 가능
-
-* Bamboo 
+* Nexus Repository 
     
-    * Atlassian에서 만든 CI / CD 도구
+    * Sonartype에서 개발중인 오픈소스 프로젝트
 
-    * Jira, Bitbucket과 연계성이 좋음
+    * 도커 이미지 외 리눅스 설치 패키지, 자바 라이브러리, 파이썬 라이브러리 등의 파일 저장소 역할 수행
 
-* Jenkins
+    * 무료 / 유료 (기술 지원 + 기능 추가)
 
-    * 오픈 소스 CI / CD 도구
+* Docker Registry
 
-    * 다양한 사용 환경, 언어 및 빌드 도구와 연계 가능
+    * Docker에서 개발중인 오픈소스 프로젝트
 
-* Jenkins X
+    * 도커 이미지만 저장 가능
 
-    * 장애가 나서 서비스가 내려갔을 경우 그동안의 git webhook 이벤트를 받을 수 없음 => 개선
+    * 무료
 
-    * Disk 공간을 사람이 직접 비워주고 관리를 해주어야 함 => 개선
+## 인증 서명 요청과 인증서
 
-    * Plugin 버전이 맞지 않는 경우 장애가 발생 => 개선
+* CSR (Certificate Signing Request)
 
-    * Branch 가 여러개일 경우 속도가 느려짐 => 개선
+    * 공개키 생성을 위해 기재하는 항목들
 
-    * JVM으로 인해 사용중이지 않을 경우에도 메모리를 잡아먹으며 클라우드 환경에서는 불필요한 비용이 발생 => 개선
+    * 항목: 국가명, 주소, 회사명, 부서명, 도메인명, 이메일 등
+
+    ```shell
+    # Common Name (CN): The fully qualified domain name (FQDN) of your server.
+
+    # Organization (O): The legal name of your organization. Do not abbreviate and include any suffixes, such as Inc., Corp., or LLC.
+
+    # Organizational Unit (OU):  The division of your organization handling the certificate.
+
+    # City/Locality (L): The city where your organization is located. This shouldn’t be abbreviated.
+
+    # State/County/Region (S): The state/region where your organization is located. This shouldn't be abbreviated.
+
+    # Country (C): The two-letter code for the country where your organization is located.
+
+    # Email Address: An email address used to contact your organization.
+    ```
+
+* CRT (Certificate)
+
+    * 안전한 통신을 위해 전송계층과 응용계층 사이에 별도의 계층인 SSL(Secure Socket Layer)을 만들어 데이터를 암호화/복호화 함
+
+    * 웹 서버와 클라이언트 간의 안전한 연결을 위해 SSL Handshake 프로세스를 이용하는데, 이때 사용되는 인증서를 의미함
+
+    * 서드파티 공급업체가 제공하는 CA 인증서(공인인증서)와 openssl를 이용한 사설 인증서가 있음
+
+## 사설 레지스트리 운영 방법
+
+* 레지스트리 생성하기
+
+    ```shell
+    $ docker run -d \ 
+        --restart=always \
+        --name registry \
+        -v /etc/docker/certs:/docker-in-certs:ro \
+        -v /registry-image:/var/lib/registry \
+        -e REGISTRY_HTTP_ADDR=0.0.0.0:443 \
+        -e REGISTRY_HTTP_TLS_CERTIFICATE=/docker-in-certs/tls.crt \
+        -e REGISTRY_HTTP_TLS_KEY=/docker-in-certs/tls.key \
+        -p 8443:443 \
+        registry:2
+    ```
+
+* 레지스트리에 이미지 등록하기
+
+    ```shell
+    $ docker push <사설 레지스트리 ip>:8443/<이미지명>
+    ```
+
+* 레지스트리에 등록된 이미지 사용하기
+
+    ```shell
+    $ docker pull <사설 레지스트리 ip>:8443/<이미지명>
+    ```
+
+* 쿠버네티스 spec을 이용해 사설 레지스트리에 등록된 이미지 배포하기
+
+    ```yaml
+    spec:
+        containers: 
+        - image: <사설 레지스트리 ip>:8443/<이미지명>
+          name: <컨테이너명>
+    ```
 
 
 ## Links
