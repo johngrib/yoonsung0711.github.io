@@ -59,6 +59,24 @@ regenerate: true
 
 * [[/study/network/05_network]]
 
+* [[/study/network/06_01_network]]
+
+* [[/study/network/06_02_network]]
+
+* [[/study/network/07_01_network]]
+
+* [[/study/network/07_02_network]]
+
+* [[/study/network/07_03_network]]
+
+* [[/study/network/07_04_network]]
+
+* [[/study/network/08_network]]
+
+* [[/study/network/09_network]]
+
+* [[/study/network/10_network]]
+
 <!--
 
 ## [[/algorithm/index]]
